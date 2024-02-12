@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Le QG X">
+    <link rel="shortcut icon" type="image/x-icon" href="source/leqg.png">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+    <title>Le QG Dev</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="source/leqg.png" alt="Logo">
+          <ul>
+            <li class="navList active">
+              <a href="#homeSection">
+                <span class="navIcon"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" fill="#fff"/></svg></span>
+                <span class="navText">Home</span>
+              </a>
+            </li>
+            <li class="navList">  
+              <a href="#docSection">
+                <span class="navIcon"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 448 512"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z" fill="#fff"/></svg></span>
+                <span class="navText">Docs</span>
+              </a>
+            </li>
+            <li class="navList">
+              <a href="#projectSection">
+                <span class="navIcon"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" fill="#fff"/></svg></span>
+                <span class="navText">Projects</span>
+              </a>
+            </li>
+            <li class="navList">
+              <a href="#premiumSection">
+                <span class="navIcon"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 320 512"><path d="M48.1 240c-.1 2.7-.1 5.3-.1 8v16c0 2.7 0 5.3 .1 8H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H60.3C89.9 419.9 170 480 264 480h24c17.7 0 32-14.3 32-32s-14.3-32-32-32H264c-57.9 0-108.2-32.4-133.9-80H256c17.7 0 32-14.3 32-32s-14.3-32-32-32H112.2c-.1-2.6-.2-5.3-.2-8V248c0-2.7 .1-5.4 .2-8H256c17.7 0 32-14.3 32-32s-14.3-32-32-32H130.1c25.7-47.6 76-80 133.9-80h24c17.7 0 32-14.3 32-32s-14.3-32-32-32H264C170 32 89.9 92.1 60.3 176H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H48.1z" fill="#fff"/></svg></span>
+                <span class="navText">Le QG +</span>
+              </a>
+            </li>
+            <li class="navList">
+              <a href="#customersSection">
+                <span class="navIcon"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 640 512"><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/></svg></span>
+              <span class="navText" fill="#fff">About</span>
+              </a>
+            </li>
+            <div class="indicator"></div>
+          </ul>
+        </nav>
+        <label class="dayNight">
+          <input type="checkbox">
+          <div></div>
+        </label>
+        <div class="progress-wrap">
+          <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+          </svg>
+        </div>
+    </header>
+    <main>
+        <section class="homeSection" id="homeSection">
+          <div class="homeLine"></div>
+          <div class="homeLine"></div>
+          <div class="homeLine"></div>
+            <div class="homeText">
+              <h1>Le QG Dev</h1>
+              <p>Découvrez le QG X dès maintenant ! 🚀 Explorez nos services exclusifs et plongez dans une expérience unique. SI vous avez des questions n'hésitez pas à vous rapprochez de la page FAQ, nos réseaux sociaux ou notre support.</p>
+              <a href="#">Nous découvrir</a>
+              <a class="secondButton" href="#">Accéder au panel</a>
+            </div>
+            <div class="homeNote">
+              <div class="carouselContainer">
+                <div class="carousel">
+                  <div class="a">
+                    <div class="carouselItem">
+                      <div class="carouselProfile">
+                        <img src="source/avatar1.3.webp" alt="pdpAvis">
+                        <div>
+                          <h4>Lola L.</h4>
+                          <p>Utilisateur</p>
+                        </div>
+                        <div class="carouselStars">
+                          <p>4.5 </p>
+                          <svg style="width: 15px; height: 15px; margin: 0 0 0 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">*<path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" fill="#ffff00"/></svg>
+                        </div>
+                      </div>
+                      <div class="carouselText">
+                        Une prestation exceptionnelle du développeur! Son professionnalisme ont transformé notre vision en réalité numérique. La qualité du code et la communication transparente font de lui un atout pour tout projet de développement. Hautement recommandé!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b">
+                    <div class="carouselItem">
+                      <div class="carouselProfile">
+                        <img src="source/avatar2.3.webp" alt="pdpAvis">
+                        <div>
+                          <h4>Matthieu D.</h4>
+                          <p>Developpeur</p>
+                        </div>
+                        <div class="carouselStars">
+                          <p>5 </p>
+                          <svg style="width: 15px; height: 15px; margin: 0 0 0 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">*<path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" fill="#ffff00"/></svg>
+                        </div>
+                      </div>
+                      <div class="carouselText">
+                        Travailler avec ce client a été une expérience exceptionnelle. Sa collaboration ouverte a rendu le processus fluide. La vision du client constructive a contribué au succès du projet. Reconnaissant pour cette collaboration et prêt à travailler à nouveau sur de futurs projets ensemble.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c">
+                    <div class="carouselItem">
+                      <div class="carouselProfile">
+                        <img src="source/avatar3.3.webp" alt="pdpAvis">
+                        <div>
+                          <h4>Ibrahim K.</h4>
+                          <p>Utilisateur</p>
+                        </div>
+                        <div class="carouselStars">
+                          <p>5 </p>
+                          <svg style="width: 15px; height: 15px; margin: 0 0 0 5px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">*<path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" fill="#ffff00"/></svg>
+                        </div>
+                      </div>
+                      <div class="carouselText">
+                        Travailler avec ce développeur a été une bonne expérience. Sa compréhension de nos besoins, son approche créative des défis techniques et sa réactivité ont dépassé nos attentes. Il a su apporter des solutions efficaces à chaque étape du projet.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section class="docSection" id="docSection">
+          <div class="leftWave wave">
+            <svg width="1099" height="8405" viewBox="0 0 1099 8405" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M348.938 3C482.105 222.833 750.638 768.3 759.438 1191.5C770.438 1720.5 -7.06215 2801 14.4378 3276C35.9378 3751 651.938 4723.5 640.938 5047.5C629.938 5371.5 305.938 5943.5 251.938 6224.5C208.738 6449.3 572.271 7059.83 759.438 7337" stroke="url(#paint0_linear_244_8)" stroke-width="10"/>
+              <path d="M748.937 219.5C539.937 575.833 124.137 1392.2 132.937 1807C143.937 2325.5 748.937 2801 748.937 3330C748.937 3859 132.937 5555 132.937 5825C132.937 6041 773.937 7009.67 1094.44 7467" stroke="url(#paint1_linear_244_8)" stroke-width="10"/>
+              <path d="M14.4375 284C197.938 817 564.938 2021.2 564.938 2574C564.938 3265 176.438 4085.5 165.438 4377.5C154.438 4669.5 1277.94 7995.5 953.938 8395.5" stroke="url(#paint2_linear_244_8)" stroke-width="30"/>
+              <defs>
+              <linearGradient id="paint0_linear_244_8" x1="386.777" y1="3" x2="386.777" y2="7337" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FF9F1C"/>
+              <stop offset="1" stop-color="#FF0000"/>
+              </linearGradient>
+              <linearGradient id="paint1_linear_244_8" x1="613.619" y1="219.5" x2="613.619" y2="7467" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FF9F1C"/>
+              <stop offset="1" stop-color="#FF0000"/>
+              </linearGradient>
+              <linearGradient id="paint2_linear_244_8" x1="513.535" y1="284" x2="513.535" y2="8395.5" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#2196F3"/>
+              <stop offset="1" stop-color="#FF006B"/>
+              </linearGradient>
+              </defs>
+              </svg>
+          </div>
+          <div class="rightWave wave">
+            <svg width="787" height="6906" viewBox="0 0 787 6906" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M761 4C527 198.333 59 697.2 59 1138C59 1689 674.5 2164.5 674.5 2294C674.5 2423.5 296.5 2953 296.5 3277C296.5 3601 761 3839 761 4389.5C761 4940 134.5 5912 134.5 6268.5C134.5 6553.7 307.167 6798 393.5 6884.5" stroke="url(#paint0_linear_244_9)" stroke-width="10"/>
+              <path d="M685 317.5C541 497.5 255.2 937.4 264 1257C275 1656.5 523 2553.5 555.5 3028.5C588 3503.5 361.5 3611.5 350.5 3881.5C339.5 4151.5 750.5 4768 761 5070C769.4 5311.6 260.5 6366 5 6863" stroke="url(#paint1_linear_244_9)" stroke-width="10"/>
+              <path d="M771.5 436C552 807 117.3 1741.2 134.5 2510C156 3471 771.5 4357.5 771.5 5232C771.5 5931.6 267.5 6632.17 15.5 6895" stroke="url(#paint2_linear_244_9)" stroke-width="30"/>
+              <defs>
+              <linearGradient id="paint0_linear_244_9" x1="410" y1="4" x2="410" y2="6884.5" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#2196F3"/>
+              <stop offset="1" stop-color="#FF006B"/>
+              </linearGradient>
+              <linearGradient id="paint1_linear_244_9" x1="383.051" y1="317.5" x2="383.051" y2="6863" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#2196F3"/>
+              <stop offset="1" stop-color="#FF006B"/>
+              </linearGradient>
+              <linearGradient id="paint2_linear_244_9" x1="393.5" y1="436" x2="393.5" y2="6895" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FF9F1C"/>
+              <stop offset="1" stop-color="#FF0000"/>
+              </linearGradient>
+              </defs>
+              </svg>  
+          </div>
+          <h2>Documentation</h2>
+          <div class="step firstStep">
+            <img src="source/step1.webp" alt="stepIllustrator">
+            <div>
+              <h3>Poster un projet</h3>
+              <p>Vous avez un projet ? Précisez le nom, le type, la description votre thème et les languages utilisés (si vous les connaissez) et n'attendez plus pour poster votre projet afin de le réaliser aux plus vite avec un de nos développeur !</p>
+            </div>
+          </div>
+          <div class="step secondStep">
+            <div>
+              <h3>Trouver un projet</h3>
+              <p>Vous êtes développeur ? Vous avez besoin d'argent ? Parcourez dès maintenant nos projets et réalisez les en collaboratiosn avec votre client qui est roi ! Ne vous engagez pas si vous n'avez pas les compétences.</p>
+            </div>
+            <img id="changeImage" src="source/step2.webpng" alt="stepIllustrator">
+          </div>
+          <div class="step thirdStep">
+            <img src="source/step3.webp" alt="stepIllustrator">
+            <div>
+              <h3>Faire un projet</h3>
+              <p>Vous venez d'être engagé pour un projet ? Parlez avec votre client, proposez lui un plan avant de faire le projet et une fois validé, passez au plus dur du travails et finissez le dans le temps impartie en respectant le cahier des charges.</p>
+            </div>
+          </div>
+          <div class="step fourthStep">
+            <div>
+              <h3>Déployer un projet</h3>
+              <p>Une fois que le client a validé votre rendu, vous avez le devoirs de déployer le projet si l'utilisateur a régler les frais de déploiement (précisé dans la feuille de route) ! Faites le grâce à nos services ou faites le vous même si vous en avait les compétences !</p>
+            </div>
+            <img id="changeImage2" src="source/step4.webpng" alt="stepIllustrator">
+          </div>
+          <div class="step fifthStep">
+            <img src="source/step5.webp" alt="stepIllustrator">
+            <div>
+              <h3>Demander un support</h3>
+              <p>Notre support reste à votre disposition tout au long du processus de création et déploiement du projet. Le support peut restreindre ou aider donc il est à utiliser avec modération !</p>
+            </div>
+          </div>
+          <div class="step sixthStep">
+            <div>
+              <h3>Terminer / Abandonner un projet</h3>
+              <p>Vous avez fini le projet et le client a validé le rendu ? Rendez le projet sur la page indiquée et attendez votre paiement. Dans le cas ou vous n'avez pas pu finir le projet, vous devez déposer les fichiers dans la page indiquée puis demander l'abandon du projet qui sera validé sous 48h par notre équipe.</p>
+            </div>
+            <img src="source/step6.webp" alt="stepIllustrator">
+          </div>
+        </section>
+        <section class="projectSection" id="projectSection">
+          <h2>Coming Soon<span>.</span></h2>
+        </section>
+        <section class="premiumSection" id="premiumSection">
+          <div class="component-pricing-list">
+            <div class="titleSub">
+              <h3>Découvrez nos offres premium :</h3>
+              <p>
+                Choisissez l'offre qui vous correspond le plus et profitez plainement de Le QG Dev
+              </p>
+            </div>
+            <ul class="pricing-list">
+              <li class="actv"><a href="#">
+                <span class="title">Créer votre compte :</span>
+                <span class="price"> Free</span>
+                <span class="btn">Commencer <i class="fas fa-long-arrow-alt-right"></i></span>
+              </a></li>
+              <li><a href="#">
+                <span class="best-price">
+                  Meilleur prix
+                </span>
+                <span class="title domain-title">Camino</span>
+                <span class="price"> 10€/mois
+                    <span>Au lieu de 15.99€/mois</span>
+                </span>
+                <span class="btn">Acheter <i class="fas fa-long-arrow-alt-right"></i></span>
+              </a></li>
+              <li><a href="#">
+                <span class="title domain-title">IA</span>
+                <span class="price"> 25€/mois
+                    <span>Au lieu de 29.99€/mois</span>
+                </span>
+                <span class="btn">Acheter <i class="fas fa-long-arrow-alt-right"></i></span>
+              </a></li>
+            </ul>
+            <div class="action">
+              <a href="#">Voir plus</a>
+            </div>
+          </div>
+        </section>
+        <section class="customersSection" id="customersSection">
+          <h2>Coming Soon<span>.</span></h2>
+        </section>
+    </main>
+    <footer>
+      <p>@copyright 2024 Le QG X</p>
+      
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>

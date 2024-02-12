@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <title>Dev Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Salut, je m'appelle Mateo et je suis étudiant en école d'ingénieur à l'EFREI. Je me passionne pour la création de sites innovants, m'impliquant du processus de conception à la programmation. En tant que développeur, je suis constamment en quête d'apprentissage pour rester à la pointe de la technologie.">
+    <meta name="keywords" content="portfolio dev developpeurs web design creation e-commerce site website">
+    <meta name="author" content="Matéo Journiac">
+    <link rel="shortcut icon" type="image/x-icon" href="../../source/portfolio/portfolio/qg.png">
+    <link rel="stylesheet" type="text/css" href="../css/portfolio.css">
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+  </head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li class="navList active">
+          <a href="#homeSection">
+            <span class="navIcon"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" fill="#fff"/></svg></span>
+            <span class="navText">Home</span>
+          </a>
+        </li>
+        <li class="navList">  
+          <a href="#workSection">
+            <span class="navIcon"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 512 512"><path d="M152.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 113C-2.3 103.6-2.3 88.4 7 79s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM224 96c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zM160 416c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32zM48 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" fill="#fff"/></svg></span>
+            <span class="navText">Presents</span>
+          </a>
+        </li>
+        <li class="navList">
+          <a href="#exempleSection">
+            <span class="navIcon"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 512 512"><path d="M320 488c0 9.5-5.6 18.1-14.2 21.9s-18.8 2.3-25.8-4.1l-80-72c-5.1-4.6-7.9-11-7.9-17.8s2.9-13.3 7.9-17.8l80-72c7-6.3 17.2-7.9 25.8-4.1s14.2 12.4 14.2 21.9v40h16c35.3 0 64-28.7 64-64V153.3C371.7 141 352 112.8 352 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V320c0 70.7-57.3 128-128 128H320v40zM456 80a24 24 0 1 0 -48 0 24 24 0 1 0 48 0zM192 24c0-9.5 5.6-18.1 14.2-21.9s18.8-2.3 25.8 4.1l80 72c5.1 4.6 7.9 11 7.9 17.8s-2.9 13.3-7.9 17.8l-80 72c-7 6.3-17.2 7.9-25.8 4.1s-14.2-12.4-14.2-21.9V128H176c-35.3 0-64 28.7-64 64V358.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3V192c0-70.7 57.3-128 128-128h16V24zM56 432a24 24 0 1 0 48 0 24 24 0 1 0 -48 0z" fill="#fff"/></svg></span>
+            <span class="navText">My work</span>
+          </a>
+        </li>
+        <li class="navList">
+          <a href="#projectSection">
+            <span class="navIcon"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" fill="#fff"/></svg></span>
+            <span class="navText">Projects</span>
+          </a>
+        </li>
+        <li class="navList">
+          <a href="#CVSection">
+            <span class="navIcon"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zm256-32H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z" fill="#fff"/></svg></span>
+          <span class="navText">About</span>
+          </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </nav>
+    <label class="dayNight">
+      <input type="checkbox">
+      <div></div>
+    </label>
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+      </svg>
+    </div>
+  </header>
+  <main>
+    <section id="homeSection">
+      <div class="homeContent homeText">
+        <h1>Matéo Journiac</h1>
+        <h2>Salut, je m'appelle Mateo et je suis étudiant en école d'ingénieur à l'EFREI. Je me passionne pour la création de sites innovants, m'impliquant du processus de conception à la programmation. En tant que développeur <span class="typing-text"></span> , je suis constamment en quête d'apprentissage pour rester à la pointe de la technologie.</h2>
+      </div>
+      <div class="homeContent homeVisu">
+        <a href="../source/portfolio/4L Trophy (1).pdf" download><div class="homeAction"><img src="../source/portfolio/4LTrophy.jpg" alt="background">4L Trophy</div></a>
+        <a href="../index.html"><div class="homeAction"><img src="../source/portfolio/qg.png" alt="background">Le QG Dev</div></a>
+        <a href="#CVSection"><div class="homeAction"><img src="../source/portfolio/createSite.jpg" alt="background">Vous voulez un site web ?</div></a>
+        <a href="#"><div class="homeAction"><img src="../source/portfolio/partenaire.jpg" alt="background">Nos partenaires</div></a>
+      </div>
+    </section>
+    <section id="workSection">
+      <div class="lineDeco"></div>
+      <div class="lineDeco"></div>
+      <p class="workText">Afin d'assurer une expérience optimale entre vous et votre projet, je suis équipé de diverses compétences, parmi lesquelles :</p>
+      <div class='cards-wrapper'>
+        <div class='cards'>
+          <button class='card card1' tabindex="-1">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 200">
+          <path d="M208 80c0-26.5 21.5-48 48-48h64c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48h-8v40h152c30.9 0 56 25.1 56 56v32h8c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48h-64c-26.5 0-48-21.5-48-48v-64c0-26.5 21.5-48 48-48h8v-32c0-4.4-3.6-8-8-8H312v40h8c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48h-64c-26.5 0-48-21.5-48-48v-64c0-26.5 21.5-48 48-48h8v-40H112c-4.4 0-8 3.6-8 8v32h8c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48v-64c0-26.5 21.5-48 48-48h8v-32c0-30.9 25.1-56 56-56h152v-40h-8c-26.5 0-48-21.5-48-48V80z"/>
+        </svg>
+            </div>
+            <h2>Communication</h2>
+            <h4>La capacité à communiquer clairement avec les membres de l'équipe et les clients est cruciale pour assurer la compréhension mutuelle des objectifs du projet.</h4>    
+          </button>
+      
+          <button class='card card2' tabindex="-1">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 200">
+        <path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2s-6.3 25.5 4.1 33.7l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L477.4 348.9c1.7-9.4 2.6-19 2.6-28.9h64c17.7 0 32-14.3 32-32s-14.3-32-32-32h-64.3c-1.1-14.1-5-27.5-11.1-39.5.7-.6 1.4-1.2 2.1-1.9l64-64c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-64 64c-.7.7-1.3 1.4-1.9 2.1-14.3-7.3-30.4-11.4-47.5-11.4H264c-8.3 0-16.3 1-24 2.8L38.8 5.1zM320 0c-53 0-96 43-96 96v3.6c0 15.7 12.7 28.4 28.4 28.4h135.2c15.7 0 28.4-12.7 28.4-28.4V96c0-53-43-96-96-96zM160.3 256H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h64c0 24.6 5.5 47.8 15.4 68.6-2.2 1.3-4.2 2.9-6 4.8l-64 64c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l63.1-63.1a159.2 159.2 0 0 0 90.3 39.6V335.5L166.7 227.3c-3.4 9-5.6 18.7-6.4 28.7zM336 479.2c36.6-3.6 69.7-19.6 94.8-43.8L336 360.7v118.5z"/>
+      </svg>
+            </div>
+            <h2>Time management</h2>
+            <h4>La gestion du temps est essentielle. Cela implique la planification, la définition des priorités et la capacité à respecter les délais tout en maintenant la qualité du travail.</h4>    
+          </button>
+      
+          <button class='card card3' tabindex="-1">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 200">
+        <path d="M308.5 135.3a22 22 0 0 0 6.2-25 171 171 0 0 0-7.6-15.5l-3.1-5.4c-3-5-6.3-9.9-9.8-14.6a22 22 0 0 0-24.7-7.1L241.3 77c-10.7-8.8-23-16-36.2-20.9l-6.1-29a21.9 21.9 0 0 0-18.5-17.8c-6.6-.9-13.3-1.3-20.1-1.3h-.7c-6.8 0-13.5.4-20.1 1.2A22 22 0 0 0 121.1 27L115 56.1c-13.3 5-25.5 12.1-36.2 20.9l-28.3-9.2c-9-3-19-.5-24.7 7.1-3.5 4.7-6.8 9.6-9.9 14.6l-3 5.3c-2.8 5-5.3 10.2-7.6 15.6a22.1 22.1 0 0 0 6.2 25l22.2 19.8a128.8 128.8 0 0 0 0 41.7l-22.2 19.8a22 22 0 0 0-6.2 25 187 187 0 0 0 7.6 15.6l3 5.2c3 5.1 6.3 9.9 9.9 14.6a22 22 0 0 0 24.7 7.1l28.2-9.3c10.7 8.8 23 16 36.2 20.9l6.1 29.1a21.9 21.9 0 0 0 18.5 17.8 172 172 0 0 0 40.8 0 22 22 0 0 0 18.5-17.8l6.1-29.1c13.3-5 25.5-12.1 36.2-20.9l28.2 9.3c9 3 19 .5 24.7-7.1 3.5-4.7 6.8-9.5 9.8-14.6l3.1-5.4a171 171 0 0 0 7.6-15.5c3.7-8.7.9-18.6-6.2-25l-22.2-19.8a131 131 0 0 0 0-41.8l22.2-19.8zM112 176a48 48 0 1 1 96 0 48 48 0 1 1-96 0zm392.7 324.5a22 22 0 0 0 25 6.2 171 171 0 0 0 15.5-7.6l5.4-3.1c5-3 9.9-6.3 14.6-9.8a22 22 0 0 0 7.1-24.7l-9.3-28.2c8.8-10.7 16-23 20.9-36.2L613 391a21.9 21.9 0 0 0 17.8-18.5 172 172 0 0 0 0-40.8 22 22 0 0 0-17.8-18.5l-29.1-6.2c-5-13.3-12.1-25.5-20.9-36.2l9.3-28.2c3-9 .5-19-7.1-24.7-4.7-3.5-9.6-6.8-14.6-9.9l-5.3-3c-5-2.8-10.2-5.3-15.6-7.6a22.1 22.1 0 0 0-25 6.2l-19.8 22.2a131 131 0 0 0-41.8 0l-19.8-22.2a22 22 0 0 0-25-6.2 187 187 0 0 0-15.6 7.6l-5.2 3a144 144 0 0 0-14.6 9.9 22 22 0 0 0-7.1 24.7l9.3 28.2c-8.8 10.7-16 23-20.9 36.2l-29.1 6a21.9 21.9 0 0 0-17.8 18.5 172 172 0 0 0 0 40.8 22 22 0 0 0 17.8 18.5l29.1 6.1c5 13.3 12.1 25.5 20.9 36.2l-9.3 28.2c-3 9-.5 19 7.1 24.7 4.7 3.5 9.5 6.8 14.6 9.8l5.4 3.1a171 171 0 0 0 15.5 7.6c8.7 3.7 18.6.9 25-6.2l19.8-22.2a131 131 0 0 0 41.8 0l19.8 22.2zM464 304a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+      </svg>
+            </div>
+            <h2>Adaptabilité</h2>
+            <h4>Les projets web peuvent évoluer rapidement, que ce soit en raison de changements dans les exigences du client, des technologies émergentes ou d'autres facteurs. Être capable de s'adapter est une compétence clé.</h4>    
+          </button>
+      
+          <button class='card card4' tabindex="-1">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 200">
+        <path d="M176 24a24 24 0 1 0-48 0v40a64 64 0 0 0-64 64H24a24 24 0 1 0 0 48h40v56H24a24 24 0 1 0 0 48h40v56H24a24 24 0 1 0 0 48h40a64 64 0 0 0 64 64v40a24 24 0 1 0 48 0v-40h56v40a24 24 0 1 0 48 0v-40h56v40a24 24 0 1 0 48 0v-40a64 64 0 0 0 64-64h40a24 24 0 1 0 0-48h-40v-56h40a24 24 0 1 0 0-48h-40v-56h40a24 24 0 1 0 0-48h-40a64 64 0 0 0-64-64V24a24 24 0 1 0-48 0v40h-56V24a24 24 0 1 0-48 0v40h-56V24zm-16 104h192a32 32 0 0 1 32 32v192a32 32 0 0 1-32 32H160a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32zm192 32H160v192h192V160z"/>
+      </svg>
+            </div>
+            <h2>Problem Solving</h2>
+            <h4>La capacité à identifier, analyser et résoudre rapidement les problèmes qui surviennent au cours d'un projet est importante. Cela peut inclure des obstacles techniques ou des changements inattendus.</h4>    
+          </button>
+          
+          <button class='card card5' tabindex="-1">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 200">
+        <path d="M418.4 157.9A80 80 0 1 0 320 77.5l-183.8 73.6a80 80 0 1 0-22.1 129.3l145.6 127.4a80 80 0 1 0 120.9-42.2l37.8-207.7zm-262.1 74.3a78.3 78.3 0 0 0 3.7-21.7L343.8 137c3.6 3.5 7.4 6.7 11.6 9.5l-37.8 207.6a77.8 77.8 0 0 0-15.8 5.5L156.3 232.2z"/>
+      </svg>
+            </div>
+            <h2>Leadership</h2>
+            <h4>Un bon leader inspire et motive son équipe, prend des décisions éclairées et assume la responsabilité du succès/échec du projet. Le leadership implique également la capacité d'encourager la collaboration au sein de l'équipe.</h4>    
+          </button>
+      
+        </div>
+        <button class="arrow-btn arrow-btn-prev" tabindex="0">
+          <svg viewBox="0 0 256 512">
+            <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+          </svg>
+        </button>
+        <button class="arrow-btn arrow-btn-next" tabindex="0">
+          <svg viewBox="0 0 256 512">
+            <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+          </svg>
+        </button>
+      </div>
+    </section>
+    <section id="exempleSection">
+      <div class="lineDeco"></div>
+      <div class="lineDeco"></div>
+      <div class="splitview skewed">
+        <div class="panel bottom">
+            <div class="content">
+                <div class="description">
+                    <h2>Passez d'UNE boutique en ligne,</h2>
+                    <p>La plupart des sites commerciaux sont basés sur des modèles similaires.</p>
+                </div>
+
+                <img src="../source/portfolio/site_moche.png" alt="Original">
+            </div>
+        </div>
+
+        <div class="panel top">
+            <div class="content">
+                <div class="description">
+                    <h2>A LA boutique en ligne.</h2>
+                    <p>Démarquez vous et faites confiance à une expertise de qualité afin d'avoir la meilleur boutique en ligne.</p>
+                </div>
+
+                <img src="../source/portfolio/site_beau.png" alt="Duotone">
+            </div>
+        </div>
+
+        <div class="handle"></div>
+      </div>
+    </section>
+    <section id="projectSection">
+      <div class="lineDeco"></div>
+      <div class="lineDeco"></div>
+      <div class="projectsDescription">
+        <h2>Mes projets :</h2>
+        <p>Voici quelques projets qui m'ont permis de m'améliorer et de m'expérimenter dans le développement web et interactif.</p>
+      </div>
+      <div class="projectsContent">
+        <a href="projectPortfolio/calculator.html">
+          <div class="project" id="project1">
+            <img src="../source/portfolio/calculator.jpg" alt="pdp" id="banner1">
+            <h3 id="title1">Calculette</h3>
+            <p id="description1">Une calculatrice simple et fonctionnelle pour effectuer des calculs, des plus petits aux plus grands ! Ce projet est principalement basé sur JavaScript pour exécuter les calculs, avec bien sûr l'utilisation de HTML et CSS pour styliser l'ensemble.</p>
+          </div>
+        </a>
+        <a href="projectPortfolio/quiz.html">
+          <div class="project" id="project2">
+            <img src="../source/portfolio/quiz.jpg" alt="pdp" id="banner2">
+            <h3 id="title2">Quiz</h3>
+            <p id="description2">Voila un Quiz simple principalement fais en JS afin de tester ses connaisances théorique sur le développement web !</p>
+          </div>
+        </a>
+        <a href="projectPortfolio/rps.html">
+          <div class="project" id="project3">
+            <img src="../source/portfolio/rps.jpg" alt="pdp" id="banner3">
+            <h3 id="title3">Pierre Feuille Ciseau</h3>
+            <p id="description3">Le jeu le plus emblématique de nos enfances sur un écran ! Vous pouvez vous entrainer pour ne plus jamais perdre à ce jeu ;)</p>
+          </div>
+        </a>
+        <a href="projectPortfolio/stopwatch.html">
+          <div class="project" id="project4">
+            <img src="../source/portfolio/chrono.jpg" alt="pdp" id="banner4">
+            <h3 id="title4">Chronomètre</h3>
+            <p id="description4">Chronomètrez vous dès maintenant avec notre chrono simple pour ne pas compliqué cette tâche simple.</p>
+          </div>
+        </a>
+        <a href="projectPortfolio/passwordGen.html">
+          <div class="project" id="project5">
+            <img src="../source/portfolio/mdp.jpg" alt="pdp" id="banner5">
+            <h3 id="title5">Mot de passe</h3>
+            <p id="description5">Un générateur de mot de passe est utile si vous manquez d'inspiration ! L'utilisation du JS est nécessaire pour ce projet !</p>
+          </div>
+        </a>
+        <a href="projectPortfolio/typingText.html">
+          <div class="project" id="project6">
+            <img src="../source/portfolio/typingText.jpg" alt="pdp" id="banner6">
+            <h3 id="title6">Vitesse de frappe</h3>
+            <p id="description6">Faites un rapide test pour connaitre votre vitesse de frappe et/ou entrainez vous pour devenir le meilleur ;)</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section id="CVSection">
+      <div class="CVContact">
+        <h2>Contacts</h2>
+        <div class="mailContact contact">
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" fill="#F2F2F2"/></svg>
+          <p>journiacmateo@gmail.com</p>
+        </div>
+        <div class="telContact contact">
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" fill="#F2F2F2"/></svg>
+          <p>+33 7 69 79 59 56</p>
+        </div>  
+        <div class="linkedinContact contact">
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" fill="#F2F2F2"/></svg>
+          <a href="https://linkedin.com/in/matéo-jouniac-9aa4402a3">Matéo Journiac</a>
+        </div>  
+      </div>
+      <div class="CVSeparator"></div>
+      <div class="CVForm">
+        <img src="../source/portfolio/CV_Visu.png" alt="cvVisu">
+        <a href="../source/portfolio/CVFile.pdf" download>
+          <div class="overlay">
+              <span>Télécharger</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script type="text/javascript" src="../js/portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>typingmeter - Typing Speed Test</title>
+    <style>
+        /* Import Google Font - Poppins */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        }
+        body{
+        display: flex;
+        padding: 0 10px;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #4D59FB;
+        }
+        h2{
+            font-size: 1em;
+            text-align: center;
+            color: #161623;
+            margin: 5vh 0 0 0;
+        }
+        a{
+            color: #161623;
+            transition: 0.2s ease-in-out;
+        }
+        a:hover{
+            color: #f25c2a;
+        }
+        ::selection{
+        color: #fff;
+        background: #17A2B8;
+        }
+        .wrapper{
+        width: 770px;
+        padding: 35px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        }
+        header{
+        text-align: center;
+        }
+        .wrapper .input-field{
+        opacity: 0;
+        z-index: -999;
+        position: absolute;
+        }
+        .wrapper .content-box{
+        padding: 13px 20px 0;
+        border-radius: 10px;
+        border: 1px solid #4D59FB;
+        }
+        .content-box .typing-text{
+        overflow: hidden;
+        max-height: 256px;
+        }
+        .typing-text::-webkit-scrollbar{
+        width: 0;
+        }
+        .typing-text p{
+        font-size: 21px;
+        text-align: justify;
+        letter-spacing: 1px;
+        word-break: break-all;
+        }
+        .typing-text p span{
+        position: relative;
+        }
+        .typing-text p span.correct{
+        color: #56964f;
+        }
+        .typing-text p span.incorrect{
+        color: #cb3439;
+        outline: 1px solid #fff;
+        background: #ffc0cb;
+        border-radius: 4px;
+        }
+        .typing-text p span.active{
+        color: #4D59FB;
+        }
+        .typing-text p span.active::before{
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: 5px;
+        background: #17A2B8;
+        animation: blink 1s ease-in-out infinite;
+        }
+        @keyframes blink{
+        50%{ 
+            opacity: 1; 
+        }
+        }
+        .content-box .content{
+        margin-top: 17px;
+        display: flex;
+        padding: 12px 0;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #bfbfbf;
+        }
+        .content button{
+        outline: none;
+        border: none;
+        width: 105px;
+        color: #fff;
+        padding: 8px 0;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        background: #4D59FB;
+        transition: transform 0.3s ease;
+        }
+        .content button:active{
+        transform: scale(0.97);
+        }
+        .content .result-details{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: calc(100% - 140px);
+        justify-content: space-between;
+        }
+        .result-details li{
+        display: flex;
+        height: 20px;
+        list-style: none;
+        position: relative;
+        align-items: center;
+        }
+        .result-details li:not(:first-child){
+        padding-left: 22px;
+        border-left: 1px solid #bfbfbf;
+        }
+        .result-details li p{
+        font-size: 19px;
+        }
+        .result-details li span{
+        display: block;
+        font-size: 20px;
+        margin-left: 10px;
+        }
+        li span b{
+        font-weight: 500;
+        }
+        li:not(:first-child) span{
+        font-weight: 500;
+        }
+        @media (max-width: 745px) {
+        .wrapper{
+            padding: 20px;
+        }
+        .content-box .content{
+            padding: 20px 0;
+        }
+        .content-box .typing-text{
+            max-height: 100%;
+        }
+        .typing-text p{
+            font-size: 19px;
+            text-align: left;
+        }
+        .content button{
+            width: 100%;
+            font-size: 15px;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .content .result-details{
+            width: 100%;
+        }
+        .result-details li:not(:first-child){
+            border-left: 0;
+            padding: 0;
+        }
+        .result-details li p, 
+        .result-details li span{
+            font-size: 17px;
+        }
+        }
+        @media (max-width: 518px) {
+        .wrapper .content-box{
+            padding: 10px 15px 0;
+        }
+        .typing-text p{
+            font-size: 18px;
+        }
+        .result-details li{
+            margin-bottom: 10px;
+        }
+        .content button{
+            margin-top: 10px;
+        }
+        }
+    </style>
+  <body class="bg-light">
+    <!-- Outdated broswers -->
+    <script type="text/javascript">
+        if (detectIE()) {
+            alert("Internet Explorer ne marche pas sur cette page !")
+            window.open('https://microsoftedgewelcome.microsoft.com/en-us/mb01?form=MY020C&slide=welcome','_blank');
+    } else {
+        // No, IE browser not Detected
+    }
+    </script>
+    <div class="wrapper">
+    <header>
+    <h1>Test de vitesse de frappe</h1>
+    <h2>Retourner à la <a href="../portfolio.html">Page principale</a></h2>
+    </header>
+        <input type="text" class="input-field">
+        <div class="content-box">
+            <div class="typing-text">
+                <p></p>
+            </div>
+            <div class="content">
+                <ul class="result-details">
+                <li class="time">
+                    <p>Temps restant:</p>
+                    <span><b>60</b>s</span>
+                </li>
+                <li class="mistake">
+                    <p>Fautes:</p>
+                    <span>0</span>
+                </li>
+                <li class="wpm">
+                    <p>WPM:</p>
+                    <span>0</span>
+                </li>
+                <li class="cpm">
+                    <p>CPM:</p>
+                    <span>0</span>
+                </li>
+                </ul>
+                <button>Recommencer</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const paragraphs = [
+        `Mon chat se lance dans la programmation en Python, mais dès qu'il voit une souris, il oublie tout. Sa logique est plutôt "CTRL+Z" dans ces moments-là. Les développeurs et les réunions, c'est une histoire compliquée. C'est comme essayer de fusionner des branches sans conflits, ça finit souvent en erreur 404 : réunion not found.`,
+        `Quand un geek va chez le coiffeur, il demande une coupe qui ressemble au code ASCII. Si le coiffeur ne comprend pas, il risque de finir avec une coupe de cheveux binaire. J'ai raconté une blague à mon ordinateur sur le cloud, maintenant il ne cesse de me dire qu'il y a des données pluvieuses. Je crois qu'il a besoin d'un pare-feu pour son sens de l'humour.`,
+        `Pourquoi les programmeurs évitent-ils la nature? Parce qu'ils considèrent les arbres comme des structures de données et les insectes comme des bugs non résolus. Un développeur entre dans un bar, commande 1 bière, commande 0 bières, commande 999999999 bières, commande -1 bière. C'est ainsi que les développeurs comptent en binaire.`,
+        `J'ai demandé à mon micro-ondes de me raconter une blague. Il a simplement répondu : "Error: Joke not found. Please check your sense of humor settings." Pourquoi les développeurs adorent-ils les cafés? Parce que rien ne les réveille mieux qu'une bonne tasse de Java.`,
+        `Un algorithme de tri entre dans un restaurant. Le serveur lui dit : "Désolé, nous n'avons pas de place pour votre type ici." L'algorithme répond : "Pas de problème, je vais juste me réorganiser." Comment un développeur résout-il ses problèmes personnels? Il les met dans une boucle "while" et continue à les repousser jusqu'à ce qu'ils disparaissent d'eux-mêmes.`,
+        `Pourquoi les développeurs détestent-ils les réveillons du Nouvel An? Parce que la date change tout le temps, et ils ont du mal à mettre à jour leurs résolutions. Quand un serveur tombe en panne, il dit à son propriétaire : "Je pense que j'ai besoin d'un peu de repos, je fais une pause."`,
+        `Pourquoi les développeurs sont-ils de bons danseurs? Parce qu'ils ont un excellent sens du rythme, surtout quand ils dansent sur des lignes de code. J'ai offert un câble USB à mon ami. Maintenant, il est toujours branché sur moi. On peut dire que notre amitié est bien connectée.`,
+        `Pourquoi les développeurs détestent-ils les orages? Parce qu'ils ont du mal à trouver le point de fuite quand la foudre frappe. Quand un algorithme et une base de données se disputent, c'est souvent à propos de leur relation : "Tu n'es pas normalisé !" crie l'algorithme. "Et toi, tu es trop complexe !" réplique la base de données.`,
+        `Pourquoi les serveurs sont-ils de bons humoristes? Parce qu'ils ont un sens aigu de l'ironie. Ils sont toujours en train de dire : "Je suis down, mais pas pour rire." Un développeur et un designer entrent dans un bar. Le barman leur demande : "Pourquoi avez-vous l'air si fatigués?" Ils répondent : "Nous essayons de trouver un compromis."`,
+        `Pourquoi les langages de programmation sont-ils comme des voitures? Parce que chaque développeur pense que le sien est le meilleur, mais au final, ils font tous la même chose. Mon ordinateur a décidé de devenir végétarien. Maintenant, il ne mange que des bits de salade. Ça semble être une alimentation saine pour un PC!`,
+        `J'ai demandé à mon code JavaScript de m'accompagner à une soirée, mais il a refusé en disant qu'il préférait rester en callback. Pourquoi les programmeurs détestent-ils les jeux de société? Parce qu'ils ne supportent pas les bugs dans la matrice.`,
+        `Comment appelle-t-on un développeur qui ne cesse de manger des bonbons? Un code sucré. Un algorithme sort avec un autre algorithme. Les amis disent que c'est un couple "stable", mais on sait tous qu'il y a toujours un peu de complexité cachée.`,
+        `Pourquoi les serveurs ne jouent-ils jamais aux cartes? Parce qu'ils détestent les cœurs et les piques, et ils préfèrent toujours rester en mode "passif". Un développeur perd ses clés. Après des heures de recherche, il les retrouve dans la poche de son code source. Il devrait peut-être revoir ses méthodes de tri.`,
+        `Mon logiciel antivirus est devenu dépressif. Il se sentait inutile car il n'a jamais trouvé de virus. Je lui ai dit qu'il était un excellent gardien, même s'il n'avait jamais eu l'occasion de briller. Pourquoi les développeurs web font-ils de bons jardiniers? Parce qu'ils ont l'habitude de planter des arbres dans leurs codes.`,
+        `Un bug entre dans un bar. Le barman lui demande : "Pourquoi es-tu ici?" Le bug répond : "Je suis venu pour boire un verre, et votre établissement avait l'air bien buggé." Comment les développeurs prennent-ils leur café? En binaire : 0 pour déca, 1 pour café normal.`,
+        `Pourquoi les algorithmes sont-ils si sarcastiques? Parce qu'ils ont un sens aigu de la dérision, surtout quand ils trouvent des erreurs dans votre logique. Mon disque dur a pris sa retraite. Maintenant, il se repose dans un endroit calme et souhaite ne plus jamais entendre parler de sauvegardes.`,
+        `Pourquoi les développeurs détestent-ils les montagnes russes? Parce qu'ils ont déjà assez d'émotions fortes en déboguant. Un programme informatique a fait une blague à mon café. Il a dit qu'il préférait la programmation décaféinée. Pas sûr que mon café ait apprécié.`,
+        `Comment les développeurs se saluent-ils? En se disant "Hello World!" évidemment. J'ai installé un nouveau pare-feu sur mon ordinateur. Maintenant, il refuse de me laisser regarder des films de science-fiction. Il prend sa sécurité au sérieux.`,
+        `Pourquoi les programmeurs sont-ils de bons photographes? Parce qu'ils ont l'œil pour la mise au point. Un développeur rentre chez lui et dit à son chien : "Assis, chien." Le chien répond : "Syntaxe incorrecte. Réessayez avec 'assis' en minuscules."`,
+        `Mon chat a décidé d'apprendre le langage de programmation C++. Maintenant, il me réveille toutes les nuits en miaulant "Meowplusplus" à la lueur du clavier. Pourquoi les ordinateurs ont-ils des oreilles? Pour entendre leurs programmes. Malheureusement, la plupart d'entre eux ne font que du bruit.`
+        ];
+        const typingText = document.querySelector(".typing-text p"),
+        inpField = document.querySelector(".wrapper .input-field"),
+        tryAgainBtn = document.querySelector(".content button"),
+        timeTag = document.querySelector(".time span b"),
+        mistakeTag = document.querySelector(".mistake span"),
+        wpmTag = document.querySelector(".wpm span"),
+        cpmTag = document.querySelector(".cpm span");
+
+        let timer,
+        maxTime = 60,
+        timeLeft = maxTime,
+        charIndex = mistakes = isTyping = 0;
+
+        function loadParagraph() {
+            const ranIndex = Math.floor(Math.random() * paragraphs.length);
+            typingText.innerHTML = "";
+            paragraphs[ranIndex].split("").forEach(char => {
+                let span = `<span>${char}</span>`
+                typingText.innerHTML += span;
+            });
+            typingText.querySelectorAll("span")[0].classList.add("active");
+            document.addEventListener("keydown", () => inpField.focus());
+            typingText.addEventListener("click", () => inpField.focus());
+        }
+
+        function initTyping() {
+            let characters = typingText.querySelectorAll("span");
+            let typedChar = inpField.value.split("")[charIndex];
+            if(charIndex < characters.length - 1 && timeLeft > 0) {
+                if(!isTyping) {
+                    timer = setInterval(initTimer, 1000);
+                    isTyping = true;
+                }
+                if(typedChar == null) {
+                    if(charIndex > 0) {
+                        charIndex--;
+                        if(characters[charIndex].classList.contains("incorrect")) {
+                            mistakes--;
+                        }
+                        characters[charIndex].classList.remove("correct", "incorrect");
+                    }
+                } else {
+                    if(characters[charIndex].innerText == typedChar) {
+                        characters[charIndex].classList.add("correct");
+                    } else {
+                        mistakes++;
+                        characters[charIndex].classList.add("incorrect");
+                    }
+                    charIndex++;
+                }
+                characters.forEach(span => span.classList.remove("active"));
+                characters[charIndex].classList.add("active");
+
+                let wpm = Math.round(((charIndex - mistakes)  / 5) / (maxTime - timeLeft) * 60);
+                wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;
+                
+                wpmTag.innerText = wpm;
+                mistakeTag.innerText = mistakes;
+                cpmTag.innerText = charIndex - mistakes;
+            } else {
+                clearInterval(timer);
+                inpField.value = "";
+            }   
+        }
+
+        function initTimer() {
+            if(timeLeft > 0) {
+                timeLeft--;
+                timeTag.innerText = timeLeft;
+                let wpm = Math.round(((charIndex - mistakes)  / 5) / (maxTime - timeLeft) * 60);
+                wpmTag.innerText = wpm;
+            } else {
+                clearInterval(timer);
+            }
+        }
+
+        function resetGame() {
+            loadParagraph();
+            clearInterval(timer);
+            timeLeft = maxTime;
+            charIndex = mistakes = isTyping = 0;
+            inpField.value = "";
+            timeTag.innerText = timeLeft;
+            wpmTag.innerText = 0;
+            mistakeTag.innerText = 0;
+            cpmTag.innerText = 0;
+        }
+
+        loadParagraph();
+        inpField.addEventListener("input", initTyping);
+        tryAgainBtn.addEventListener("click", resetGame);
+    </script>
+</body>
+</html>

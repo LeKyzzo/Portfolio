@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronomètre</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+       body {
+        text-align: center;
+        background-color: #03011f;
+        font-family: "Poppins", sans-serif;
+        color: #6cacc5;
+        }
+
+        h1{
+            font-size: 1.4em;
+            text-align: center;
+            color: #F2F2F2;
+            margin: 5vh 0 0 0;
+        }
+        h2{
+            font-size: 1em;
+            text-align: center;
+            color: #F2F2F2;
+            margin: 5vh 0 0 0;
+        }
+        h2 a{
+            color: #F2F2F2;
+            transition: 0.2s ease-in-out;
+        }
+        h2 a:hover{
+            color: #f25c2a;
+        }
+
+        .title {
+        font-size: 40px;
+        font-weight: bold;
+        }
+
+        #time {
+        font-size: 70px;
+        position:absolute;
+        top: 45%;
+        margin: 0 auto;
+        left: 0; right: 0;
+        }
+
+        .buttons {
+        position: absolute;
+        width: 100%;
+        bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        }
+
+        .button {
+        width: 10o0px;
+        padding: 2% 2%;
+        font-size: 20px;
+        background: rgba(42,50,113, .28);
+        cursor: pointer;
+        }
+
+        .button:hover {
+        background: #201e40;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Hardest Quiz !!!</h1>
+    <h2>Retourner à la <a href="../portfolio.html">Page principale</a></h2>
+    <div class="title">Javascript Stop Watch</div>
+    <div id="time">
+    <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">00</span>
+    </div>
+    <div class="buttons">
+    <div class="button" id="startBtn">Démarrer</div>
+    <div class="button" id="stopBtn">Arrêter</div>
+    <div class="button" id="resetBtn">Recommencer</div>
+    </div>
+
+      <script>
+        var hours = "00";
+var minutes = "00";
+var seconds = "00";
+var milliseconds = "00";
+
+var h = document.querySelector("#hours");
+var m = document.querySelector("#minutes");
+var s = document.querySelector("#seconds");
+var ms = document.querySelector("#milliseconds");
+var start = document.querySelector("#startBtn");
+var stop = document.querySelector("#stopBtn");
+var reset = document.querySelector("#resetBtn");
+let interval;
+
+function startTimer(){
+  
+  milliseconds++;
+//Add 0 before millisecond count under 10
+  if (milliseconds < 10){
+    ms.innerHTML = "0" + milliseconds;
+  }
+//Remove 0 above 10
+  if (milliseconds > 10){
+    ms.innerHTML = milliseconds;
+  }
+//Add a second, reinitiate millisecond count 
+  if (milliseconds > 99){
+    seconds++;
+    s.innerHTML = seconds;
+    milliseconds = 0;
+    ms.innerHTML = "0" + 0;
+  }
+//Add 0 before second count under 10
+  if (seconds < 10){
+    s.innerHTML = "0" + seconds;
+  }
+//Remove 0 above 10
+  if (seconds > 10){
+    s.innerHTML = seconds;
+  }
+//Add a minute, reinitiate second count   
+  if (seconds > 59){
+    minutes++;
+    m.innerHTML = minutes;
+    seconds = 0;
+    s.innerHTML = "0" + 0;
+  }
+ //Add 0 before minute count under 10 
+  if (minutes < 10){
+    m.innerHTML = "0" + minutes;
+  }
+ //Remove 0 above 10
+  if (minutes > 10){
+    m.innerHTML = minutes;
+  }
+ //Add a hour, reinitiate minute count 
+  if (minutes > 59){
+    hours++;
+    h.innerHTML = hours;
+    minutes = 0;
+    m.innerHTML = "0" + 0;
+  }
+ //Add 0 if hour under 10
+    if (hours < 10) {
+    h.innerHTML = "0" + hours;
+  }
+}
+
+start.addEventListener('click', function(){
+  clearInterval(interval);
+  var oneSecond = 10;
+  interval = setInterval( startTimer, oneSecond);
+})
+
+stop.addEventListener('click', function(){
+  clearInterval(interval);
+});
+
+reset.addEventListener('click', function(){
+  clearInterval(interval);
+  hours = "00";
+  minutes = "00";
+  seconds = "00";
+  milliseconds = "00";
+  h.innerHTML = "0" + hours;
+  m.innerHTML = "0" + minutes;
+  s.innerHTML = "0" + seconds;
+  ms.innerHTML = "0" + milliseconds;
+  
+})
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+        /*Init & body*/
+        *,
+        *::before,
+        *::after {
+        box-sizing: border-box;
+        }
+
+        html,
+        body {
+        min-height: 100%;
+        }
+
+        body {
+        background: linear-gradient(180deg, #feead2, #fff8ee);
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        &:before {
+            content: '';
+            width: 800px;
+            height: 600px;
+            background: #f00;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        }
+        h1{
+            font-size: 1.4em;
+            text-align: center;
+            color: #161623;
+            margin: 5vh 0 0 0;
+        }
+        h2{
+            font-size: 1em;
+            text-align: center;
+            color: #161623;
+            margin: 5vh 0 0 0;
+        }
+        a{
+            color: #161623;
+            transition: 0.2s ease-in-out;
+        }
+        a:hover{
+            color: #f25c2a;
+        }
+
+
+        /*Calculator*/
+        .calculator {
+        height: 60vh;
+        width: 300px;
+        background: linear-gradient(135deg, #fcaf3b, #f25c2a);
+        box-shadow: 0 10px 28px #d8724a;
+        margin: 15vh auto;
+        position: absolute;
+        overflow: hidden;
+        border-radius: 20px;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -62%);
+        }
+
+
+        /*screen*/
+        .screen {
+        background: #fff;
+        padding: 15px 28px;
+        height: 10vh;
+        text-align: right;
+        font-size: 29px;
+        color: #4c455a;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: 0 2px 3px #d8724a;
+        transition: color .6s ease-in-out;
+
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        }
+
+
+        /*Buttons*/
+        .buttons {
+
+        & button {
+            height: 9vh;
+            float: right;
+            border: none;
+            background: transparent;
+            color: #fff;
+            padding: 15px 10px;
+            outline: none;
+            text-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+            border-radius: 14px;
+
+            &:hover {
+            background: rgba(255, 255, 255, 0.1);;
+            }
+
+            &:active, &.active {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 14px;
+            }
+
+        }
+
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        & .numbers {
+            float: left;
+            width: 75%;
+            height: 50vh;
+            padding: 10px;
+
+            & button {
+            height: 12vh;
+            width: 33.3333%;
+            padding: 10px 10px;
+            }
+        }
+
+        & .operators {
+            float: right;
+            width: 25%;
+            height: 50vh;
+            padding: 16px 10px 10px;
+            background: rgba(0, 0, 0, 0.1);
+            min-height: 260px;
+
+            & button {
+            width: 100%;
+            padding: 11px 10px;
+            
+            &[data-val="x"] {
+                font-size: 13px;
+            }
+            
+            &[data-val="-"] {
+                font-size: 18px;
+            }
+
+            &[data-val="="] {
+                font-size: 16px;
+            }
+            }
+
+        }
+        }
+    </style>
+</head>
+<body>
+    <h1>Cool Calculator</h1>
+    <h2>Retourner à la <a href="../portfolio.html">Page principale</a></h2>
+    <div class="calculator">
+        <div class="screen">15x3</div>
+        <div class="buttons">
+          <div class="numbers">
+            <button data-val="9">9</button>
+            <button data-val="8">8</button>
+            <button data-val="7">7</button>
+            <button data-val="6">6</button>
+            <button data-val="5">5</button>
+            <button data-val="4">4</button>
+            <button data-val="3">3</button>
+            <button data-val="2">2</button>
+            <button data-val="1">1</button>
+            <button data-val="clear">C</button>
+            <button data-val=".">.</button>
+            <button data-val="0" href="0">0</button>
+          </div>
+          <div class="operators">
+            <button data-val="÷">÷</button>
+            <button data-val="x">x</button>
+            <button data-val="-">-</button>
+            <button data-val="+">+</button>
+            <button data-val="=">=</button>
+          </div>
+        </div>
+    </div>
+
+    <script>
+       
+       document.addEventListener('DOMContentLoaded', function () {
+            var keys = document.querySelectorAll('.calculator button');
+            var screen = document.querySelector('.screen');
+            var decimal = false;
+            var operators = ['+', '-', 'x', '÷'];
+
+            keys.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    var keyVal = this.dataset.val;
+                    var output = screen.innerHTML;
+
+                    console.log(keyVal);
+
+                    // clear
+                    if (keyVal == 'clear') {
+                        screen.innerHTML = '';
+                        decimal = false;
+                    }
+                    // equal
+                    else if (keyVal == '=') {
+                        var equation = output;
+                        var lastChar = equation[equation.length - 1];
+                        equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
+                        if (operators.indexOf(lastChar) > -1 || lastChar == '.')
+                            equation = equation.replace(/.$/, '');
+                        if (equation) {
+                            screen.innerHTML = eval(equation);
+                        }
+                        decimal = false;
+                    }
+                    // operators
+                    else if (this.classList.contains('operators')) {
+                        var lastChar = output[output.length - 1];
+                        if (output != '' && operators.indexOf(lastChar) == -1) {
+                            screen.innerHTML += keyVal;
+                        } else if (output == '' && keyVal == '-') {
+                            screen.innerHTML += keyVal;
+                        }
+                        if (operators.indexOf(lastChar) > -1 && output.length > 1) {
+                            screen.innerHTML = screen.innerHTML.replace(/.$/, keyVal);
+                        }
+                        decimal = false;
+                    }
+                    // decimal
+                    else if (keyVal == '.') {
+                        if (!decimal) {
+                            screen.innerHTML += keyVal;
+                            decimal = true;
+                        }
+                    }
+                    // buttons
+                    else {
+                        screen.innerHTML += keyVal;
+                    }
+                });
+            });
+
+            window.addEventListener('keydown', function (e) {
+                console.log(e.which);
+                var key;
+                switch (e.which) {
+                    // Définissez les touches appropriées ici
+                }
+
+                var activeButton = document.querySelector('[data-val="' + key + '"]');
+                if (activeButton) {
+                    activeButton.classList.add('active');
+                    activeButton.click();
+                }
+            });
+
+            window.addEventListener('keyup', function () {
+                var activeButton = document.querySelector('.active');
+                if (activeButton) {
+                    activeButton.classList.remove('active');
+                }
+            });
+
+            // Supprimez ou ajustez le délai en fonction de vos besoins
+            setTimeout(function () {
+                document.querySelector('[data-val="clear"]').click();
+                setTimeout(function () {
+                    document.querySelector('[data-val="1"]').click();
+                    setTimeout(function () {
+                        document.querySelector('[data-val="5"]').click();
+                        setTimeout(function () {
+                            document.querySelector('[data-val="x"]').click();
+                            setTimeout(function () {
+                                document.querySelector('[data-val="3"]').click();
+                            }, 200);
+                        }, 200);
+                    }, 200);
+                }, 100);
+            }, 100);
+        });
+    </script>
+</body>
+</html>
